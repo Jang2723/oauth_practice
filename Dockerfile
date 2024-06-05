@@ -1,5 +1,5 @@
 # jdk 설치
-FROM eclipse-temurin:21 as buold
+FROM eclipse-temurin:21 as build
 
 # 소스코드 가져오기
 WORKDIR /app
