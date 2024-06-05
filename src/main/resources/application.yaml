@@ -22,7 +22,7 @@ spring:
               - account_email
 
   datasource:
-#    url: jdbc:mysql://<endpoint>:<port>/<schema>
+    url: jdbc:mysql://mysql:3306/test
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: test
     password: password
