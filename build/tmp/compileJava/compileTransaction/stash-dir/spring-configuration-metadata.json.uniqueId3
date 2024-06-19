@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "spring.security.oauth2.client.registration.kakao",
+      "type": "com.example.oauthPractice.KakaoOAuth2Properties",
+      "sourceType": "com.example.oauthPractice.KakaoOAuth2Properties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.security.oauth2.client.registration.kakao.authorization-grant-type",
+      "type": "java.lang.String",
+      "sourceType": "com.example.oauthPractice.KakaoOAuth2Properties"
+    },
+    {
+      "name": "spring.security.oauth2.client.registration.kakao.client-authentication-method",
+      "type": "java.lang.String",
+      "sourceType": "com.example.oauthPractice.KakaoOAuth2Properties"
+    },
+    {
+      "name": "spring.security.oauth2.client.registration.kakao.client-id",
+      "type": "java.lang.String",
+      "sourceType": "com.example.oauthPractice.KakaoOAuth2Properties"
+    },
+    {
+      "name": "spring.security.oauth2.client.registration.kakao.client-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.example.oauthPractice.KakaoOAuth2Properties"
+    },
+    {
+      "name": "spring.security.oauth2.client.registration.kakao.redirect-uri",
+      "type": "java.lang.String",
+      "sourceType": "com.example.oauthPractice.KakaoOAuth2Properties"
+    },
+    {
+      "name": "spring.security.oauth2.client.registration.kakao.scope",
+      "type": "java.lang.String",
+      "sourceType": "com.example.oauthPractice.KakaoOAuth2Properties"
+    }
+  ],
+  "hints": []
+}

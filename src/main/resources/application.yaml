@@ -1,34 +1,44 @@
 spring:
-#  security:
-#    oauth2:
-#      client:
-#        # OAuth2 서비스 제공자를 사용하는데 필요한 정보
-#        provider:
-#          kakao:
-#            authorization-uri: https://kauth.kakao.com/oauth/authorize
-#            token-uri: https://kauth.kakao.com/oauth/token
-#            user-info-uri: https://kapi.kakao.com/v2/user/me
-#            user-name-attribute: id
-#
-#        registration:
-#          kakao:
-#            client-id:
-#            client-secret:
-#            redirect-uri: http://localhost:8080/login/oauth2/code/kakao
-#            authorization-grant-type: authorization_code
-#            client-authentication-method: client_secret_post
-#            client-name: Kakao
-#            scope:
-#              - account_email
+  security:
+    oauth2:
+      client:
+        # OAuth2 서비스 제공자를 사용하는데 필요한 정보
+        provider:
+          kakao:
+            # 인가코드 받기
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            # token 받기
+            token-uri: https://kauth.kakao.com/oauth/token
+            # 사용자 정보 가져오기
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+
+        registration:
+          kakao:
+            client-id: 408d027221a66d55699c19129b8192c1
+            client-secret: 2TYgX4xHuG2Thns1aoZ4XyPhkqNIPPsw
+            redirect-uri: http://localhost:8080/login/oauth2/code/kakao
+            authorization-grant-type: authorization_code
+            client-authentication-method: client_secret_post
+            client-name: Kakao
+            scope:
+              - profile_nickname
+              - account_email
   datasource:
-    url: jdbc:mysql://mysql:3306/test
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: test
+#    url: jdbc:mysql://mysql:3306/test
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: test
+#    password: password
+    url: jdbc:sqlite:db.sqlite
+    driver-class-name: org.sqlite.JDBC
+    username: sa
     password: password
+
   jpa:
     hibernate:
       ddl-auto: create
-    database: mysql
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+#    database: mysql
 
 
 # 커스텀 설정 (Spring 내부 설정 아님)
